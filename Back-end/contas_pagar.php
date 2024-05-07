@@ -1,30 +1,30 @@
 <?php
 class ContasPagar {
-    private $ContasaPagarID;
+    private $contasaPagarID;
     private $valor;
     private $dataVencimento;
     private $descricao;
 
-    public function __construct($ContasaPagarID,$valor,$dataVencimento,$descricao) {
-        $this->ContasaPagarID = $ContasaPagarID;
+    public function __construct($contasaPagarID,$valor,$dataVencimento,$descricao) {
+        $this->ContasaPagarID = $contasaPagarID;
         $this->valor = $valor;
         $this->dataVencimento = $dataVencimento;
         $this->descricao = $descricao;
     }
 
     public function getCONTASAPAGARID() {
-        return $this->ContasaPagarID;
+        return $this->contasaPagarID;
     }
 
-    public function getValor() {
+    public function getVALOR() {
         return $this->valor;
     }
 
-    public function getDataVencimento() {
+    public function getDATAVENCIMENTO() {
         return $this->dataVencimento;
     }
 
-    public function getDescricao() {
+    public function getDESCRICAO() {
         return $this->descricao;
     }
 }
