@@ -6,23 +6,29 @@ class CobrancasExtrasLocacaoDevolucao{
     Private $LocacaoDevolucaoID;
     Private $Situacao;
 
-    public function __construct($CobrancaExtraID,$TipoCobrancaExtraID,$LocacaoDevolucaoID,$Situacao){
-        $this->CobrancaExtraID = $CobrancaExtraID;
-        $this->TipoCobrancaExtraID = $TipoCobrancaExtraID;
-        $this->LocacaoDevolucaoID = $LocacaoDevolucaoID;
-        $this->Situacao = $Situacao;
-    }
-
     public function getCOBRANCAEXTRAID(){
         return $this->CobrancaExtraID;
+    }
+    public function setCOBRANCAEXTRAID($CobrancaExtraID){
+        $this->CobrancaExtraID = $CobrancaExtraID;
     }
     public function getTIPOCOBRANCAEXTRAID(){
         return $this->TipoCobrancaExtraID;
     }
+    public function setTIPOCOBRANCAEXTRAID($TipoCobrancaExtraID){
+        $this->TipoCobrancaExtraID = $TipoCobrancaExtraID;
+    }
     public function getLOCACAODEVOLUCAOID(){
         return $this->LocacaoDevolucaoID;
+    }
+    public function setLOCACAODEVOLUCAOID($LocacaoDevolucaoID){
+        $this->LocacaoDevolucaoID = $LocacaoDevolucaoID;
     }    
     public function getSITUACAO(){
         return $this->Situacao;
     }
-} 
+    public function setSITUACAO($Situacao){
+        $this->Situacao = $Situacao;
+    }
+}
+?> 
