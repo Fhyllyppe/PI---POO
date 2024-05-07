@@ -5,7 +5,7 @@ class ContasPagar {
     private $dataVencimento;
     private $descricao;
 
-    public function __construct($ContasaPagarID, $valor, $dataVencimento, $descricao) {
+    public function __construct($ContasaPagarID,$valor,$dataVencimento,$descricao) {
         $this->ContasaPagarID = $ContasaPagarID;
         $this->valor = $valor;
         $this->dataVencimento = $dataVencimento;
