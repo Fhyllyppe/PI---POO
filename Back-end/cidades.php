@@ -1,24 +1,30 @@
 <?php
+class Cidades {
+    private $CidadeID;
+    private $Nome;
+    private $EstadoID;
 
-class Cidades{
-    Private $CidadeID;
-    Private $Nome;
-    Private $EstadoID;
-
-    public function __construct($CidadeID, $Nome, $EstadoID){
-        $this->CidadeID = $CidadeID;
-        $this->Nome = $Nome;
-        $this->EstadoID = $EstadoID;
-    }
-
-    public function getCIDADEID(){
+    public function getCIDADEID() {
         return $this->CidadeID;
     }
-    public function getNOME(){
+
+    public function setCIDADEID($CidadeID) {
+        $this->CidadeID = $CidadeID;
+    }
+
+    public function getNOME() {
         return $this->Nome;
     }
-    public function getESTADOID(){
+
+    public function setNOME($Nome) {
+        $this->Nome = $Nome;
+    }
+
+    public function getESTADOID() {
         return $this->EstadoID;
     }
-} 
-   
+
+    public function setESTADOID($EstadoID) {
+        $this->EstadoID = $EstadoID;
+    }
+}
