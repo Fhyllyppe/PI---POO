@@ -1,28 +1,40 @@
 <?php
+class Cargos {
+    private $CargoID;
+    private $Nome;
+    private $SalarioBase;
+    private $Situacao;
 
-class Cargos{
-    Private $CargoID;
-    Private $Nome;
-    Private $SalarioBase;
-    Private $Situacao;
-
-    public function __construct($CargoID,$Nome,$SalarioBase,$Situacao){
-        $this->CargoID = $CargoID;
-        $this->Nome = $Nome;
-        $this->SalarioBase = $SalarioBase;
-        $this->Situacao = $Situacao;
-    }
-
-    public function getCARGOID(){
+    public function getCARGOID() {
         return $this->CargoID;
     }
-    public function getNOME(){
+
+    public function setCARGOID($CargoID) {
+        $this->CargoID = $CargoID;
+    }
+
+    public function getNOME() {
         return $this->Nome;
     }
-    public function getSALARIOBASE(){
+
+    public function setNOME($Nome) {
+        $this->Nome = $Nome;
+    }
+
+    public function getSALARIOBASE() {
         return $this->SalarioBase;
     }
-    public function getSITUACAO(){
+
+    public function setSALARIOBASE($SalarioBase) {
+        $this->SalarioBase = $SalarioBase;
+    }
+
+    public function getSITUACAO() {
         return $this->Situacao;
     }
-} 
+
+    public function setSITUACAO($Situacao) {
+        $this->Situacao = $Situacao;
+    }
+}
+>?
