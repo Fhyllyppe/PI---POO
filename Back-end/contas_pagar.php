@@ -32,7 +32,6 @@ class Adicionais {
     public function getSITUACAO() {
         return $this->Situacao;
     }
-?>
 
     public function setSITUACAO($Situacao) {
         $this->Situacao = $Situacao;
