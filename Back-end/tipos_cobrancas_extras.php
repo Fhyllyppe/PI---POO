@@ -1,33 +1,49 @@
 <?php
+class TiposCobrancasExtras {
+    private $TipoCobrancaExtraID;
+    private $Nome;
+    private $Descricao;
+    private $Valor;
+    private $Situacao;
 
-class TiposCobrancasExtras{
-    Private $TipoCobrancaExtraID;
-    Private $Nome;
-    Private $Descricao;
-    Private $Valor;
-    Private $Situacao;
-
-    public function __construct($TipoCobrancaExtraID,$Nome,$Descricao,$Valor,$Situacao){
-        $this->TipoCobrancaExtraID = $TipoCobrancaExtraID;
-        $this->Nome = $Nome;
-        $this->Descricao = $Descricao;
-        $this->Valor = $Valor;
-        $this->Situacao = $Situacao;
-    }
-
-    public function getTIPOCOBRANCAEXTRAID(){
+    public function getTIPOCOBRANCAEXTRAID() {
         return $this->TipoCobrancaExtraID;
     }
-    public function getNOME(){
+
+    public function setTIPOCOBRANCAEXTRAID($TipoCobrancaExtraID) {
+        $this->TipoCobrancaExtraID = $TipoCobrancaExtraID;
+    }
+
+    public function getNOME() {
         return $this->Nome;
     }
-    public function getDESCRICAO(){
+
+    public function setNOME($Nome) {
+        $this->Nome = $Nome;
+    }
+
+    public function getDESCRICAO() {
         return $this->Descricao;
     }
-    public function getVALOR(){
+
+    public function setDESCRICAO($Descricao) {
+        $this->Descricao = $Descricao;
+    }
+
+    public function getVALOR() {
         return $this->Valor;
     }
-    public function getSITUACAO(){
+
+    public function setVALOR($Valor) {
+        $this->Valor = $Valor;
+    }
+
+    public function getSITUACAO() {
         return $this->Situacao;
     }
-} 
+
+    public function setSITUACAO($Situacao) {
+        $this->Situacao = $Situacao;
+    }
+}
+?>
