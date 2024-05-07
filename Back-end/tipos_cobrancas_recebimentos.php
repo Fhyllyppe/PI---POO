@@ -1,23 +1,32 @@
 <?php
 
-class TiposCobrancasRecebimentos{
-    Private $TipoCobrancaRecebimentoID;
-    Private $Nome;
-    Private $Situacao;
+class TiposCobrancasRecebimentos {
+    private $TipoCobrancaRecebimentoID;
+    private $Nome;
+    private $Situacao;
 
-    public function __construct($TipoCobrancaRecebimentoID,$Nome,$Situacao){
-        $this->TipoCobrancaRecebimentoID = $TipoCobrancaRecebimentoID;
-        $this->Nome = $Nome;
-        $this->Situacao = $Situacao;
-    }
-
-    public function getTIPOCOBRANCARECEBIMENTOID(){
+    public function getTIPOCOBRANCARECEBIMENTOID() {
         return $this->TipoCobrancaRecebimentoID;
     }
-    public function getNOME(){
+
+    public function setTIPOCOBRANCARECEBIMENTOID($TipoCobrancaRecebimentoID) {
+        $this->TipoCobrancaRecebimentoID = $TipoCobrancaRecebimentoID;
+    }
+
+    public function getNOME() {
         return $this->Nome;
     }
-    public function getSITUACAO(){
+
+    public function setNOME($Nome) {
+        $this->Nome = $Nome;
+    }
+
+    public function getSITUACAO() {
         return $this->Situacao;
     }
-} 
+
+    public function setSITUACAO($Situacao) {
+        $this->Situacao = $Situacao;
+    }
+}
+?>
