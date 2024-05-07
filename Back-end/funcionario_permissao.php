@@ -1,23 +1,31 @@
 <?php
 
-class FuncionarioPermissao{
-    Private $FuncionarioPermissaoID;
-    Private $PermissaoID;
-    Private $FuncionarioID;
+class FuncionarioPermissao {
+    private $FuncionarioPermissaoID;
+    private $PermissaoID;
+    private $FuncionarioID;
 
-    public function __construct($FuncionarioPermissaoID,$PermissaoID,$FuncionarioID){
-        $this->FuncionarioPermissaoID = $FuncionarioPermissaoID;
-        $this->PermissaoID = $PermissaoID;
-        $this->FuncionarioID = $FuncionarioID;
-    }
-
-    public function getFUNCIONARIOPERMISSAOID(){
+    public function getFUNCIONARIOPERMISSAOID() {
         return $this->FuncionarioPermissaoID;
     }
-    public function getPERMISSAOID(){
+
+    public function setFUNCIONARIOPERMISSAOID($FuncionarioPermissaoID) {
+        $this->FuncionarioPermissaoID = $FuncionarioPermissaoID;
+    }
+
+    public function getPERMISSAOID() {
         return $this->PermissaoID;
     }
-    public function getFUNCIONARIOID(){
+
+    public function setPERMISSAOID($PermissaoID) {
+        $this->PermissaoID = $PermissaoID;
+    }
+
+    public function getFUNCIONARIOID() {
         return $this->FuncionarioID;
     }
-} 
+
+    public function setFUNCIONARIOID($FuncionarioID) {
+        $this->FuncionarioID = $FuncionarioID;
+    }
+}
