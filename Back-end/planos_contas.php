@@ -1,33 +1,50 @@
 <?php
 
-class PlanosContas{
-    Private $PlanoContaID;
-    Private $Nome;
-    Private $Codigo;
-    Private $Tipo;
-    Private $Situacao;
+class PlanosContas {
+    private $PlanoContaID;
+    private $Nome;
+    private $Codigo;
+    private $Tipo;
+    private $Situacao;
 
-    public function __construct($PlanoContaID,$Nome,$Codigo,$Tipo,$Situacao){
-        $this->PlanoContaID = $PlanoContaID;
-        $this->Nome = $Nome;
-        $this->Codigo = $Codigo;
-        $this->Tipo = $Tipo;
-        $this->Situacao = $Situacao;
-    }
-
-    public function getPLANOCONTAID(){
+    public function getPLANOCONTAID() {
         return $this->PlanoContaID;
     }
-    public function getNOME(){
+
+    public function setPLANOCONTAID($PlanoContaID) {
+        $this->PlanoContaID = $PlanoContaID;
+    }
+
+    public function getNOME() {
         return $this->Nome;
     }
-    public function getCODIGO(){
+
+    public function setNOME($Nome) {
+        $this->Nome = $Nome;
+    }
+
+    public function getCODIGO() {
         return $this->Codigo;
     }
-    public function getTIPO(){
+
+    public function setCODIGO($Codigo) {
+        $this->Codigo = $Codigo;
+    }
+
+    public function getTIPO() {
         return $this->Tipo;
     }
-    public function getSITUACAO(){
+
+    public function setTIPO($Tipo) {
+        $this->Tipo = $Tipo;
+    }
+
+    public function getSITUACAO() {
         return $this->Situacao;
     }
-} 
+
+    public function setSITUACAO($Situacao) {
+        $this->Situacao = $Situacao;
+    }
+}
+?>
