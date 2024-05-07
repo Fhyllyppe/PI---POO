@@ -28,3 +28,4 @@ class Cidades {
         $this->EstadoID = $EstadoID;
     }
 }
+?>
