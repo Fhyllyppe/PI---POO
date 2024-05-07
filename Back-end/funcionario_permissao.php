@@ -29,3 +29,4 @@ class FuncionarioPermissao {
         $this->FuncionarioID = $FuncionarioID;
     }
 }
+?>
