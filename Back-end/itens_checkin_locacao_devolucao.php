@@ -1,33 +1,50 @@
 <?php
 
-class ItensCheckinLocacaoDevolucao{
-    Private $LocacaoDevolucaoCheckinID;
-    Private $ItemCheckinID;
-    Private $LocacaoDevolucaoID;
-    Private $Situacao;
-    Private $Observacao;
+class ItensCheckinLocacaoDevolucao {
+    private $LocacaoDevolucaoCheckinID;
+    private $ItemCheckinID;
+    private $LocacaoDevolucaoID;
+    private $Situacao;
+    private $Observacao;
 
-    public function __construct($LocacaoDevolucaoCheckinID,$ItemCheckinID,$TipoAdicionalID,$LocacaoDevolucaoID,$Situacao,$Observacao){
-        $this->LocacaoDevolucaoCheckinID = $LocacaoDevolucaoCheckinID;
-        $this->ItemCheckinID = $ItemCheckinID;
-        $this->LocacaoDevolucaoID = $LocacaoDevolucaoID;
-        $this->Situacao = $Situacao;
-        $this->Observacao = $Situacao;
-    }
-
-    public function getLOCACAODEVOLUCAOCHECKINID(){
+    public function getLOCACAODEVOLUCAOCHECKINID() {
         return $this->LocacaoDevolucaoCheckinID;
     }
-    public function getITEMCHECKINID(){
+
+    public function setLOCACAODEVOLUCAOCHECKINID($LocacaoDevolucaoCheckinID) {
+        $this->LocacaoDevolucaoCheckinID = $LocacaoDevolucaoCheckinID;
+    }
+
+    public function getITEMCHECKINID() {
         return $this->ItemCheckinID;
     }
-    public function getLOCACAODEVOLUCAOID(){
+
+    public function setITEMCHECKINID($ItemCheckinID) {
+        $this->ItemCheckinID = $ItemCheckinID;
+    }
+
+    public function getLOCACAODEVOLUCAOID() {
         return $this->LocacaoDevolucaoID;
     }
-    public function getSITUACAO(){
+
+    public function setLOCACAODEVOLUCAOID($LocacaoDevolucaoID) {
+        $this->LocacaoDevolucaoID = $LocacaoDevolucaoID;
+    }
+
+    public function getSITUACAO() {
         return $this->Situacao;
     }
-    public function getOBSERVACAO(){
+
+    public function setSITUACAO($Situacao) {
+        $this->Situacao = $Situacao;
+    }
+
+    public function getOBSERVACAO() {
         return $this->Observacao;
     }
-} 
+
+    public function setOBSERVACAO($Observacao) {
+        $this->Observacao = $Observacao;
+    }
+}
+?>
