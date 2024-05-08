@@ -27,7 +27,7 @@ class CargosDAO{
     }
 
     public function update(Cargos $Cargos) {
-        $sql = 'UPDATE Cargos SET CargoID = ?, Nome = ?, SalarioBase = ?, Situacao = ? WHERE id = ?';
+        $sql = 'UPDATE Cargos SET CargoID = ?, Nome = ?, SalarioBase = ?, Situacao = ? WHERE CargoID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $Cargos->getCARGOID());
         $stmt->bindValue(2, $Cargos->getNOME());
@@ -37,10 +37,10 @@ class CargosDAO{
         $stmt->execute();
     }
 
-    public function delete($id) {
-        $sql = 'DELETE FROM Cargos WHERE id = ?';
+    public function delete($CargoID) {
+        $sql = 'DELETE FROM Cargos WHERE CargoID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $id);
+        $stmt->bindValue(1, $CargoID);
 
         $stmt->execute();
     }
