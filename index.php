@@ -13,7 +13,7 @@ $Situacao = "Teste situação";
 
 $bd = Conexao::getConn()->prepare($sql);
 
-$conn = new mysqli('localhost', 'postgres', '', 'pi_apuama');
+$conn = new mysqli('localhost', 'postgres', 'isaac020492.', 'pi_apuama');
 
 $adicional->setADICIONALID($AdicionalID);
 $adicional->setTIPOADICIONALID($TipoAdicionalID);
