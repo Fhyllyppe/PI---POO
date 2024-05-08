@@ -18,7 +18,7 @@ class DBController {
 	private $host = "localhost";
 	private $user = "postgres";
 	private $password = "isaac020492.";
-	private $database = "PI-POO";
+	private $database = "pi_apuama";
 	private $conn;
 	
 	function __construct() {
