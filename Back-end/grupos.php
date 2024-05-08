@@ -36,4 +36,5 @@ class Grupos {
    public function setSITUACAO($Situacao){
        $this->Situacao = $Situacao;
    }
+}    
 ?>
