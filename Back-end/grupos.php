@@ -9,7 +9,7 @@ class Grupos {
         return $this->GrupoID;
     }
 
-    public function setCARGOID($CargoID) {
+    public function setGRUPOID($GrupoID) {
         $this->GrupoID = $GrupoID;
     }
 
