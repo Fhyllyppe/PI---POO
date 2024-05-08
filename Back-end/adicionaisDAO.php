@@ -27,7 +27,7 @@ class AdicionaisDAO{
     }
 
     public function update(Adicionais $Adicionais) {
-        $sql = 'UPDATE Adicionais SET AdicionalID = ?, TipoAdicionalID = ?, LocacaoDevolucaoID = ?, Situacao = ? WHERE id = ?';
+        $sql = 'UPDATE Adicionais SET AdicionalID = ?, TipoAdicionalID = ?, LocacaoDevolucaoID = ?, Situacao = ? WHERE AdicionalID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $Adicionais->getADICIONALID());
         $stmt->bindValue(2, $Adicionais->getTIPOADICIONALID());
@@ -37,10 +37,10 @@ class AdicionaisDAO{
         $stmt->execute();
     }
 
-    public function delete($id) {
-        $sql = 'DELETE FROM Adicionais WHERE id = ?';
+    public function delete($AdicionalID) {
+        $sql = 'DELETE FROM Adicionais WHERE AdicionalID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $id);
+        $stmt->bindValue(1, $AdicionalID);
 
         $stmt->execute();
     }
