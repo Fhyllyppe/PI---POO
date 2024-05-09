@@ -1,5 +1,6 @@
 <?php
 
+
 //Singleton
 class Conexao {
     private static $instance;
