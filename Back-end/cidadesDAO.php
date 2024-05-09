@@ -1,6 +1,6 @@
 <?php
 
-class CargosDAO{
+class CidadesDAO{
     public function create (Cidades $Cidades) {
         $sql = 'INSERT INTO Cidades (Nome, EstadoID) VALUES (?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
