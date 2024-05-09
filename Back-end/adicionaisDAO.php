@@ -39,12 +39,12 @@ class AdicionaisDAO{
         $stmt->execute();
     }
 
-    public function delete($AdicionalID) {
+    public function delete($Adicionais) {
         $sql = 'DELETE FROM Adicionais WHERE AdicionalID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $AdicionalID);
+        $stmt->bindValue(1, $Adicionais->getAdicionalID());
 
         $stmt->execute();
     }
 }
-?>      
+?>    
