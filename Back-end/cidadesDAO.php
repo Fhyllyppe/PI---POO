@@ -1,12 +1,13 @@
 <?php
-class CidadesDAO{
+
+class CargosDAO{
     public function create (Cidades $Cidades) {
-        $sql = 'INSERT INTO Cidades (CidadeID, Nome, EstadoID) VALUES (?,?,?)';
+        $sql = 'INSERT INTO Cidades (Nome, EstadoID) VALUES (?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $Cidades->getCIDADEID());
-        $stmt->bindValue(2, $Cidades->getNOME());
-        $stmt->bindValue(3, $Cidades->getESTADOID());
+        $stmt->bindValue(1, $Cidades->getNOME());
+        $stmt->bindValue(2, $Cidades->getESTADOID());
         
+
         $stmt->execute();
     }
 
@@ -25,12 +26,12 @@ class CidadesDAO{
     }
 
     public function update(Cidades $Cidades) {
-        $sql = 'UPDATE Cidades SET CidadeID = ?, Nome = ?, EstadoID = ?, WHERE CidadeID = ?';
+        $sql = 'UPDATE Cidades SET Nome = ?, EstadoID = ?  WHERE CidadeID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $Adicionais->getCIDADEID());
-        $stmt->bindValue(2, $Adicionais->getNOME());
-        $stmt->bindValue(3, $Adicionais->getESTADOID());
+        $stmt->bindValue(1, $Cidades->getNOME());
+        $stmt->bindValue(2, $Cidades->getESTADOID());
         
+
         $stmt->execute();
     }
 
