@@ -2,12 +2,11 @@
 
 class CargosDAO{
     public function create (Cargos $Cargos) {
-        $sql = 'INSERT INTO Cargos (CargoID, Nome, SalarioBase, Situacao) VALUES (?,?,?,?)';
+        $sql = 'INSERT INTO Cargos (Nome, SalarioBase, Situacao) VALUES (?,?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $Cargos->getCARGOID());
-        $stmt->bindValue(2, $Cargos->getNOME());
-        $stmt->bindValue(3, $Cargos->getSALARIOBASE());
-        $stmt->bindValue(4, $Cargos->getSITUACAO());
+        $stmt->bindValue(1, $Cargos->getNOME());
+        $stmt->bindValue(2, $Cargos->getSALARIOBASE());
+        $stmt->bindValue(3, $Cargos->getSITUACAO());
 
         $stmt->execute();
     }
@@ -27,12 +26,11 @@ class CargosDAO{
     }
 
     public function update(Cargos $Cargos) {
-        $sql = 'UPDATE Cargos SET CargoID = ?, Nome = ?, SalarioBase = ?, Situacao = ? WHERE CargoID = ?';
+        $sql = 'UPDATE Cargos SET Nome = ?, SalarioBase = ?, Situacao = ? WHERE CargoID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $Cargos->getCARGOID());
-        $stmt->bindValue(2, $Cargos->getNOME());
-        $stmt->bindValue(3, $Cargos->getSALARIOBASE());
-        $stmt->bindValue(4, $Cargos->getSITUACAO());
+        $stmt->bindValue(1, $Cargos->getNOME());
+        $stmt->bindValue(2, $Cargos->getSALARIOBASE());
+        $stmt->bindValue(3, $Cargos->getSITUACAO());
 
         $stmt->execute();
     }
