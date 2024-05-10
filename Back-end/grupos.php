@@ -22,7 +22,7 @@ class Grupos {
     }
 
    public function getOBSERVACAO(){
-        return $this->Nome;
+        return $this->Observacao;
    }
 
    public function setOBSERVACAO($Observacao){
@@ -36,5 +36,5 @@ class Grupos {
    public function setSITUACAO($Situacao){
        $this->Situacao = $Situacao;
    }
-}    
+}   
 ?>
