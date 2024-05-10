@@ -1,0 +1,88 @@
+body {
+  background-color: #528FEB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.caixa {
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.texto-entrar {
+  margin-top: 20px;
+}
+
+.botao-google-container,
+.botao-apple-container,
+.botao-email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.botao-google,
+.botao-apple,
+.botao-email {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  justify-content:center;
+  align-items: left;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.botao-google img,
+.botao-apple img,
+.botao-email img {
+  width: 24px;
+  height: 24px;
+}
+
+.botao-google {
+  width: 100%;
+  border-color: #4285f4;
+}
+
+.botao-apple {
+  width: 300%;
+  border-color: #ccc;
+}
+
+.botao-email {
+  width: 100%;
+  border-color: #ccc; 
+}
+
+.link-cadastro-container {
+  margin-top: 20px;
+}
+
+.link-cadastro {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link-cadastro:hover {
+  text-decoration: underline;
+}
+
+#texto-centralizado {
+  justify-content: center;
+}
