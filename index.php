@@ -1,25 +1,32 @@
 <?php
 
 @include('PDO_back/Conexao.php'); 
-@include('Classes_back-end/Adicionais.php');
-@include('Classes_back-end/AdicionaisDAO.php');
-$adicionais = new Adicionais();
-$adicionaisDAO = new AdicionaisDAO();
+@include('Classes_back-end/Cargos.php');
+@include('Classes_back-end/CargosDAO.php');
+$sql = 'INSERT INTO Cargos (CargoID, Nome, SalarioBase, Situacao) VALUES (?,?,?,?)';
+$Cargos = new Cargos(0,0,0,0);
+$CargosDAO = new CargosDAO();
 
-$AdicionalID = 0;
-$TipoAdicionalID = "TipoTeste";
-$LocacaoDevolucaoID = "Teste devolução";
-$Situacao = "Teste situação";
+$host = "localhost";
+$port = "5432";
+$user = "postgres";
+$password = "isaac020492.";
+$database = "pi_apuama";
+
+$CargoID = 1;
+$Nome = "Teste";
+$SalarioBase = 1000;
+$Situacao =0;
 
 $bd = Conexao::getConn()->prepare($sql);
 
-$conn = new mysqli('localhost', 'postgres', '', 'pi_apuama');
+$conn = pg_connect("host=$host port=$port dbname=$database user=$user password=$password");
 
-$adicional->setADICIONALID($AdicionalID);
-$adicional->setTIPOADICIONALID($TipoAdicionalID);
-$adicional->setLOCACAODEVOLUCAOID($LocacaoDevolucao);
-$adicional->setSITUACAO($Situacao);
+$Cargos->setCARGOID($CargoID);
+$Cargos->setNOME($Nome);
+$Cargos->setSALARIOBASE($SalarioBase);
+$Cargos->setSITUACAO($Situacao);
 
-$adicionalDAO->create($adicional);
+$CargosDAO->create($Cargos);
 
 ?>
