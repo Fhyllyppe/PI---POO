@@ -67,7 +67,8 @@ body {
 
 .botao-email {
   width: 100%;
-  border-color: #ccc; 
+  border-color: #ccc;
+  text-decoration: none; 
 }
 
 .link-cadastro-container {
@@ -85,4 +86,6 @@ body {
 
 #texto-centralizado {
   justify-content: center;
+  text-decoration: none;
+  color: black;
 }

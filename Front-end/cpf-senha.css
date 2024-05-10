@@ -134,6 +134,8 @@ body {
   #texto-centralizado {
     /* Alinhamento horizontal */
     justify-content: center;
+    text-decoration: none;
+    color: black;
   }
   
   /* Estiliza o formulário */
