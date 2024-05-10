@@ -1,6 +1,6 @@
 <?php
 
-class ContasReceber{
+class ContasReceberDAO{
     public function create (ContasReceber $ContasReceber) {
         $sql = 'INSERT INTO ContasReceber (Valor, DataVencimento, Desconto, Juros, DataPagamento, ValorPago, Situacao, FornecedorID, FuncionarioID, PlanoContaID, TipoCobrancaRecebimentoID, Observacao) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
