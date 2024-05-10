@@ -119,7 +119,7 @@ body {
   /* Estiliza o link de cadastro */
   .link-cadastro {
     /* Cor do texto */
-    color: #da04da;
+    color:#0066cc;
     /* Decoração do texto */
     text-decoration: none;
   }
@@ -223,3 +223,4 @@ button[type="submit"]:hover {
   /* Cor de fundo */
   background-color: #ccc;
 }
+
