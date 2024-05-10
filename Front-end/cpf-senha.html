@@ -3,43 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tela-de-login.css">
+  <link rel="stylesheet" href="cpf-senha.css">
 </head>
 <body>
-  <!--Caixa central do site-->
+   <!--Caixa central do site-->
   <div class="caixa">
+
     <!--Logo central da empresa-->
+
     <img src="imagens/logoempresa1.png" alt="logoempresa1">
+
     <!--Nome central-->
+
     <div class="texto-entrar">
       <hr>
       <span>Entrar com</span>
     </div>
+
     <!--Botão do Google-->
+
     <div class="botao-google-container">
       <button class="botao-google">
         <img src="imagens/google.png" alt="Logo do Google">
         <span>Google</span>
       </button>
     </div>
+
     <!--Botão da apple-->
+
     <div class="botao-apple-container">
         <button class="botao-apple">
             <img src="imagens/apple.jpeg" alt="Logo da Apple">
       <span class="centralizar">Apple</span>
       </button>
     </div>
+
     <!--Botão do email ou CPF-->
+
     <div class="botao-email-container">
         <button class="botao-email">
           <img src="imagens/email.jpg" alt="Logo do Mail">
           <span id="texto-centralizado">E-mail ou CPF</span>
         </button>
       </div>
-      <!--Link nao cadastrado-->
-      <div class="link-cadastro-container">
-        <a href="cpf-senha.html" class="link-cadastro">Ainda não sou cadastrado</a>
-      </div>
+
+      <!--formulario-->
+
+      <form>
+        <label for="emailOrCpf">Email ou CPF:</label><br>
+        <input type="text" id="emailOrCpf" name="emailOrCpf"><br>
+        <label for="password">Senha:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="rememberMe">Manter conectado
+          <input type="checkbox" id="rememberMe" name="rememberMe">
+        </label>
+        <a href="#" style="margin-left: 10px;">Esqueci a senha</a><br>
+        <button type="submit">Entrar</button>
+      </form>
+
+    <!--Link nao cadastrado-->
+
+    <div class="link-cadastro-container">
+      <a href="#" class="link-cadastro">Ainda não sou cadastrado</a>
+    </div>
     
   </div>
 </body>

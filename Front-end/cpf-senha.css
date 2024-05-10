@@ -1,0 +1,223 @@
+/* Estiliza o corpo da página */
+body {
+    /* Cor de fundo */
+    background-color: #528FEB;
+    /* Layout flexbox */
+    display: flex;
+    /* Alinhamento horizontal e vertical */
+    justify-content: center;
+    align-items: center;
+    /* Altura da página */
+    height: 100vh;
+    /* Margem e padding zerados */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estiliza a caixa de conteúdo */
+  .caixa {
+    /* Cor de fundo transparente */
+    background-color: transparent;
+    /* Bordas */
+    border: 1px solid #fff;
+    /* Largura */
+    width: 500px;
+    /* Layout flexbox */
+    display: flex;
+    /* Direção da flexbox */
+    flex-direction: column;
+    /* Alinhamento horizontal */
+    align-items: center;
+    /* Padding */
+    padding: 20px;
+  }
+  
+  /* Estiliza o texto de entrada */
+  .texto-entrar {
+    /* Margem superior */
+    margin-top: 20px;
+  }
+  
+  /* Estiliza os containers de botões */
+  .botao-google-container,
+  .botao-apple-container,
+  .botao-email-container {
+    /* Layout flexbox */
+    display: flex;
+    /* Alinhamento horizontal e vertical */
+    justify-content: center;
+    align-items: center;
+    /* Margem superior */
+    margin-top: 20px;
+    /* Largura */
+    width: 80%;
+    /* Alinhamento de texto */
+    text-align: center;
+  }
+  
+  /* Estiliza os botões */
+  .botao-google,
+  .botao-apple,
+  .botao-email {
+    /* Cor de fundo */
+    background-color: #fff;
+    /* Bordas */
+    border: 1px solid #ccc;
+    /* Padding */
+    padding: 10px 20px;
+    /* Layout flexbox */
+    display: flex;
+    /* Alinhamento horizontal */
+    justify-content: center;
+    /* Alinhamento vertical */
+    align-items: left;
+    /* Espaçamento entre elementos */
+    gap: 10px;
+    /* Tamanho da fonte */
+    font-size: 16px;
+    /* Cursor */
+    cursor: pointer;
+  }
+  
+  /* Estiliza as imagens dos botões */
+  .botao-google img,
+  .botao-apple img,
+  .botao-email img {
+    /* Largura e altura */
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Estiliza cada botão individualmente */
+  .botao-google {
+    /* Largura */
+    width: 100%;
+    /* Cor da borda */
+    border-color: #4285f4;
+  }
+  
+  .botao-apple {
+    /* Largura */
+    width: 300%;
+    /* Cor da borda */
+    border-color: #ccc;
+  }
+  
+  .botao-email {
+    /* Largura */
+    width: 100%;
+    /* Cor da borda */
+    border-color: #ccc;
+  }
+  
+  /* Estiliza o container de link de cadastro */
+  .link-cadastro-container {
+    /* Margem superior */
+    margin-top: 20px;
+  }
+  
+  /* Estiliza o link de cadastro */
+  .link-cadastro {
+    /* Cor do texto */
+    color: #da04da;
+    /* Decoração do texto */
+    text-decoration: none;
+  }
+  
+  /* Estiliza o link de cadastro ao passar o mouse */
+  .link-cadastro:hover {
+    /* Decoração do texto */
+    text-decoration: underline;
+  }
+  
+  /* Estiliza o texto centralizado */
+  #texto-centralizado {
+    /* Alinhamento horizontal */
+    justify-content: center;
+  }
+  
+  /* Estiliza o formulário */
+  form {
+    /* Largura */
+    width: 300px;
+    /* Margem automática */
+    margin: 0 auto;
+  }
+  
+  /* Estiliza as labels */
+  label {
+    /* Display block */
+    display: block;
+    /* Margem superior */
+    margin-top: 10px;
+  }
+  
+  /* Estiliza as entradas de texto e senha */
+  input[type="text"], input[type="password"] {
+    /* Largura */
+    width: 100%;
+    /* Altura */
+    height: 30px;
+    /* Padding */
+    padding: 5px;
+    /* Tamanho da fonte */
+    font-size: 16px;
+    /* Bordas */
+    border: 1px solid #ccc;
+    /* Arredondamento das bordas */
+    border-radius: 5px;
+  }
+  
+  /* Input de caixa de seleção */
+input[type="checkbox"] {
+  /* Margem à direita */
+  margin-right: 50px;
+  /* Margem superior */
+  margin-top: 1px;
+  /* Alinhamento vertical */
+  vertical-align: top;
+}
+
+/* Link */
+a {
+  /* Decoração do texto */
+  text-decoration: none;
+  /* Cor do texto */
+  color: #0066cc;
+  /* Margem superior */
+  margin-top: 5px;
+  /* Alinhamento vertical */
+  vertical-align: middle;
+  /* Alinhamento de itens */
+  align-items: center;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+  /* Bordas */
+  border: 1px solid #999;
+  /* Cor de fundo */
+  background-color: #f0f0f0;
+  /* Cor do texto */
+  color: #333;
+  /* Espaçamento interno */
+  padding: 10px 20px;
+  /* Arredondamento das bordas */
+  border-radius: 5px;
+  /* Cursor */
+  cursor: pointer;
+  /* Margem superior e esquerda */
+  margin-top: 20px;
+  margin-left: 120px;
+  /* Layout flexbox */
+  display: flex;
+  /* Alinhamento horizontal e vertical */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botão de envio ao passar o mouse em cima */
+button[type="submit"]:hover {
+  /* Cor de fundo */
+  background-color: #ccc;
+}
