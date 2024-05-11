@@ -24,7 +24,7 @@ class TiposFornecedoresDAO{
     }
 
     public function update(TiposFornecedores $TiposFornecedores) {
-        $sql = 'UPDATE Clientes SET Nome = ?, Situacao = ?  WHERE TipoFornecedorID = ?';
+        $sql = 'UPDATE TiposFornecedores SET Nome = ?, Situacao = ?  WHERE TipoFornecedorID = ?';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $TiposFornecedores->getNOME());
         $stmt->bindValue(2, $TiposFornecedores->getSITUACAO());
