@@ -1,3 +1,5 @@
+<?php
+
 class TiposFornecedoresDAO{
     public function create (TiposFornecedores $TiposFornecedores) {
         $sql = 'INSERT INTO TiposFornecedores (Nome, Situacao) VALUES (?,?)';
