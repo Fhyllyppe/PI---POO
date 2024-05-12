@@ -116,20 +116,6 @@ body {
     margin-top: 20px;
   }
   
-  /* Estiliza o link de cadastro */
-  .link-cadastro {
-    /* Cor do texto */
-    color:#0066cc;
-    /* Decoração do texto */
-    text-decoration: none;
-  }
-  
-  /* Estiliza o link de cadastro ao passar o mouse */
-  .link-cadastro:hover {
-    /* Decoração do texto */
-    text-decoration: underline;
-  }
-  
   /* Estiliza o texto centralizado */
   #texto-centralizado {
     /* Alinhamento horizontal */
@@ -164,11 +150,23 @@ body {
     padding: 5px;
     /* Tamanho da fonte */
     font-size: 16px;
-    /* Bordas */
-    border: 1px solid #ccc;
-    /* Arredondamento das bordas */
-    border-radius: 5px;
+    /* Borda largura */
+    border-width: 0;
+     /*  remover o contorno de foco */
+    outline: none;
+     /* Linha branca embaixo do texto */
+    border-bottom: 2px solid #ccc;
+    /* fundo de borda */
+    background-color: transparent;
+  
   }
+
+  /* Estilos existentes */
+
+input::placeholder {
+  color: black; 
+}
+
   
   /* Input de caixa de seleção */
 input[type="checkbox"] {
@@ -178,6 +176,7 @@ input[type="checkbox"] {
   margin-top: 1px;
   /* Alinhamento vertical */
   vertical-align: top;
+  
 }
 
 /* Link */
@@ -224,3 +223,53 @@ button[type="submit"]:hover {
   background-color: #ccc;
 }
 
+.opcoes_secundarias{
+display: flex;
+justify-content: center;
+}
+
+#esqueciASenha{
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+#esqueciASenha:hover{
+  text-decoration: underline;
+  color: rgb(100, 194, 174);
+}
+
+.botao-entrar {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: #13457e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.botao-entrar:hover {
+  background-color: #979797;
+  color: #0f0f0f;
+}
+
+.link-cadastro{
+  margin-top: 40px;
+}
+
+.link-cadastro:hover {
+  text-decoration: underline;
+  color: rgb(104, 218, 193);
+}
+
+
+
+  
+  

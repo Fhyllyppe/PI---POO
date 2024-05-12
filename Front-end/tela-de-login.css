@@ -82,6 +82,7 @@ body {
 
 .link-cadastro:hover {
   text-decoration: underline;
+  color: rgb(104, 218, 193);
 }
 
 #texto-centralizado {

@@ -45,26 +45,36 @@
           <img src="imagens/email.jpg" alt="Logo do Mail">
           <a href="tela-de-login.html" id="texto-centralizado">E-mail ou CPF</a>
         </button>
-      </div>
+      </div><br>
 
       <!--formulario-->
 
       <form>
-        <label for="emailOrCpf">Email ou CPF:</label><br>
-        <input type="text" id="emailOrCpf" name="emailOrCpf"><br>
-        <label for="password">Senha:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <label for="rememberMe">Manter conectado
-          <input type="checkbox" id="rememberMe" name="rememberMe">
-        </label>
-        <a href="#" id="esqueciASenha" style="margin-left: 10px;">Esqueci a senha</a><br>
-        <button type="submit">Entrar</button>
+        
+        <input type="text" id="emailOrCpf" placeholder="Email ou CPF*" name="emailOrCpf"><br><br>
+        <input type="password" id="password" placeholder="Senha" name="password"><br>
       </form>
+
+      
+    <!--opçoes secundarias-->
+
+      <div class="opcoes_secundarias">
+        <label for="rememberMe">Manter conectado
+          <input type="checkbox" id="manterConectado" name="rememberMe">
+          </label>
+          <a href="#" id="esqueciASenha">Esqueci a senha</a>
+      </div>
+
+    <!--Botao entrar-->
+      
+    <div class="botao-entrar">
+      <button class="botao-entrar">Entrar</button>
+    </div>
 
     <!--Link nao cadastrado-->
 
-    <div class="link-cadastro-container">
-      <a href="nao_cadastrado.html" class="link-cadastro">Ainda não sou cadastrado</a>
+    <div class="link-cadastro">
+      <a  id="link-cadastro" href="nao_cadastrado.html" class="link-cadastro">Ainda não sou cadastrado</a>
     </div>
     
   </div>
