@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container-geral{
+    max-width: 1080p;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+/* header do site*/
+
+header{
+    background-color: rgba(64, 132, 234, 1);
+    width: 100%;
+}
+
+#img{
+    width: 60%;
+    height: 60%;
+}
+
+.logo, .sociais{
+    width: 25%;
+}
+
+.menu{
+    width: 50%;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    padding-right: 35px;
+    font-size: 20px;
+    position: relative;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+a:hover{
+    color:black;
+}
+
+a::after{
+    content: " ";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+a:hover::after{
+    width: 100%;
+}
+
+.sociais button{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.sociais button i{
+    font-size: 40px;
+}
+
+.sociais button i:hover{
+    color: white;
+}
+
+
+/* agora começa a outra seção de container box-pesquisa*/
+
+.box-pesquisa{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    background-color: rgba(82, 143, 235, 1);
+}
+
+h1{
+    color:white;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.container-barras{
+    margin-left: 50px;
+    margin-top: 100px;
+    justify-content: space-between;
+
+    
+}
+
+#container-barras::placeholder{
+    padding-left: 10px;
+}
+
+div input{
+    width: 200px;
+    height: 77px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: rgb(230, 230, 230);
+}
+
+.retirada{
+    width: 450px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+.devolucao{
+    width: 450px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.date{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.time{
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.entrar{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 125px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #13457e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    color: white;
+}
+
+.entrar:hover{
+    color: black;
+    background-color: gray;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+  /* Estilos específicos para o botão 'Ver disponibilidade' */
+#show-grupo-button {
+    display: inline;
+    width: 80px;
+    height: 80px;
+    align-items:center;
+    justify-content: center;
+    border-style: none;
+    background-color: transparent;
+    margin-left: 50%;
+    color:white;
+    cursor: pointer;
+  }
+
+  #show-grupo-button:hover {
+    color: black;
+  }
+  
+  /* Estilos de ícone (assumindo que você está usando Font Awesome) */
+  #show-grupo-button i {
+    font-size: 40px; /* Tamanho do ícone */
+    margin-right: 5px; /* Adicione espaçamento entre o ícone e o texto */
+  }
+
+
+  /*-----*/
+
+ /*div que está escondida contendo os blocos*/
+
+ .box-grupo {
+    width: 100%; /* Mantém a largura do container */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    display: flex; /* Habilita o layout flexbox para o container principal */
+    flex-wrap: wrap; /* Permite que os itens quebrem para várias linhas, se necessário */
+    align-items: center; /* Centraliza verticalmente dentro do container */
+    justify-content: center; /* Centraliza horizontalmente dentro do container */
+}
+  
+  .caixas-modelo {
+    display: grid; /* Habilita o layout CSS Grid para o container interno */
+    grid-template-columns: repeat(3, 1fr); /* Divide o container interno em 3 colunas iguais */
+    gap: 20px; /* Adiciona espaçamento entre os itens da grade dentro do container interno */
+    background-color: white; /* Cor de fundo (ajuste para a cor desejada) */
+    padding: 20px; /* Acolchoamento em torno do conteúdo */
+  }
+  
+  .col { /* Estilos para cada div (coluna) */
+    border: 1px solid #ccc; /* Borda simples para distinção visual */
+    padding: 0px; /* Acolchoamento em torno do conteúdo */
+    background-color: gray;
+    width: 300px;
+    height: 400px;
+  }
+
+  /* os blocos*/
+
+  .barra-titulo{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(82, 143, 235, 1);
+  }
+
+  
+                          
+  
