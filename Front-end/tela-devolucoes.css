@@ -21,6 +21,57 @@ header{
     height: 850px;
 }
 
+/* --------------- MENU LATERAL-----------------*/
+
+/* estilo para o menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* largura do menu */
+    height: 100%;
+    background-color: #333; /* cor de fundo do menu */
+    color: #fff; /* cor do texto do menu */
+    padding-top: 50px; /* para deixar espaço para o cabeçalho */
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral ul li {
+    padding: 10px 0;
+}
+
+.menu-lateral ul li a {
+    display: block;
+    padding: 20px 0px 10px 0px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-lateral ul li a:hover {
+    background-color: #555; /* cor de fundo quando o item do menu é hover */
+    color: rgb(100, 171, 253);
+    border-radius: 5px;
+}
+
+/* ajuste o conteúdo principal para não ficar atrás do menu */
+.CONTAINER-GERAL {
+    margin-left: 200px; /* ajuste de acordo com a largura do menu */
+}
+
+i{
+    padding-right: 5px;
+}
+
+
 /* --------------- LINHA 01 -----------------*/
 
 .linha-1{
