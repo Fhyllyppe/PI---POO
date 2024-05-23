@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuama</title>
+    <link rel="stylesheet" href="Edição_Locação_Devolução.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Apuama</h1>
+                <p>Software para Locadoras</p>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuCadastrosGerais')">Cadastros Gerais</a>
+                        <ul id="submenuCadastrosGerais" class="submenu">
+                            <li><a href="#">Cargos</a></li>
+                            <li><a href="#">Cidades</a></li>
+                            <li><a href="#">Grupos de Veículos</a></li>
+                            <li><a href="#">Itens do Checkin</a></li>
+                            <li><a href="#">Seguros das Locações</a></li>
+                            <li><a href="#">Tipos de Adicionais</a></li>
+                            <li><a href="#">Tipos de Cobranças Extras</a></li>
+                            <li><a href="#">Tipos de Recebimentos</a></li>
+                            <li><a href="#">Tipos de Fornecedores</a></li>
+                            <li><a href="#">Tipos de Tarifas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuCadastroPessoas')">Cadastro de Pessoas</a>
+                        <ul id="submenuCadastroPessoas" class="submenu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuFinanceiro')">Financeiro</a>
+                        <ul id="submenuFinanceiro" class="submenu">
+                            <li><a href="#">Plano de Contas</a></li>
+                            <li><a href="#">Contas a Receber</a></li>
+                            <li><a href="#">Contas a Pagar</a></li>
+                            <li><a href="#">Caixa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Locações</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#">Sair</a>
+            </div>
+        </aside>
+        <main class="content">
+            <header>
+                <h2>Locações / Devoluções</h2>
+            </header>
+            <section class="form-section">
+                <form>
+                    <div class="form-group">
+                        <label for="codigo">Código:</label>
+                        <input type="text" id="codigo" value="10" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente">Cliente:</label>
+                        <select id="cliente">
+                            <option>Thaís</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="veiculo">Veículo:</label>
+                        <select id="veiculo">
+                            <option>Logan</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcionario">Funcionário:</label>
+                        <select id="funcionario">
+                            <option>Thaís</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="situacao">Situação:</label>
+                        <select id="situacao">
+                            <option>Locado</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="seguro">Seguro:</label>
+                        <select id="seguro">
+                            <option>Seguro com cobertura completa</option>
+                            <!-- Adicione mais opções conforme necessário -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_locacao">Data da Locação:</label>
+                        <input type="date" id="data_locacao" value="2017-07-05">
+                    </div>
+                    <div class="form-group">
+                        <label for="horario_locacao">Horário:</label>
+                        <input type="time" id="horario_locacao" value="08:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="data_prevista_devolucao">Data Prevista da Devolução:</label>
+                        <input type="date" id="data_prevista_devolucao" value="2017-07-08">
+                    </div>
+                    <div class="form-group">
+                        <label for="horario_previsto_devolucao">Horário:</label>
+                        <input type="time" id="horario_previsto_devolucao" value="09:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="data_devolucao">Data da Devolução:</label>
+                        <input type="date" id="data_devolucao">
+                    </div>
+                    <div class="form-group">
+                        <label for="horario_devolucao">Horário:</label>
+                        <input type="time" id="horario_devolucao">
+                    </div>
+                    <div class="form-group">
+                        <label for="total_dias">Total de Dias:</label>
+                        <input type="text" id="total_dias" value="3" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="km_atual">Km Atual:</label>
+                        <input type="text" id="km_atual" value="98800.0">
+                    </div>
+                    <div class="form-group">
+                        <label for="km_devolucao">Km Devolução:</label>
+                        <input type="text" id="km_devolucao">
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel_tanque">Nível do Tanque:</label>
+                        <input type="text" id="nivel_tanque" value="10b.0">
+                    </div>
+                    <div class="form-group">
+                        <label for="valor_diaria">Valor Diária:</label>
+                        <input type="text" id="valor_diaria" value="110,00">
+                    </div>
+                    <div class="form-group">
+                        <label for="valor_seguro">Valor Seguro:</label>
+                        <input type="text" id="valor_seguro" value="48,00">
+                    </div>
+                    <div class="form-group">
+                        <label for="valor_total">Valor Total:</label>
+                        <input type="text" id="valor_total" value="463,00">
+                    </div>
+                    <div class="form-group">
+                        <label>Adicionais da Locação:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Assento de Elevação</label>
+                            <label><input type="checkbox"> Bebê Conforto</label>
+                            <label><input type="checkbox"> Cadeira de Bebê</label>
+                            <label><input type="checkbox" checked> GPS</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Cobranças Extras da Locação:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> Lavagem Aparência</label>
+                            <label><input type="checkbox"> Lavagem Completa</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacao">Observação:</label>
+                        <textarea id="observacao"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-save">Salvar</button>
+                        <button type="button" class="btn btn-checkin">Itens Checkin</button>
+                        <button type="button" class="btn btn-receber">Contas a Receber</button>
+                        <button type="button" class="btn btn-contrato">Contrato</button>
+                        <button type="button" class="btn btn-comprovante">Comprovante</button>
+                        <button type="button" class="btn btn-fechar">Fechar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="Edição_Locação_Devolução.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuama - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Apuama">
+            <h1>Apuama</h1>
+            <p>Software para locadoras</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#cadastros-gerais">Cadastros Gerais</a></li>
+                <li><a href="#cadastro-pessoas">Cadastro de Pessoas</a></li>
+                <li><a href="#financeiro">Financeiro</a></li>
+                <li><a href="#locacoes">Locações</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="breadcrumb">
+                <a href="#home">Início</a> / <span>Dashboard</span>
+            </div>
+            <div class="logout">
+                <a href="#sair">Sair</a>
+            </div>
+        </header>
+        <div class="cards">
+            <div class="card card-blue">
+                <div class="card-content">
+                    <span class="icon">&#128663;</span>
+                    <div>
+                        <h2>5</h2>
+                        <p>Locados</p>
+                    </div>
+                </div>
+                <a href="#ver">Ver</a>
+            </div>
+            <div class="card card-green">
+                <div class="card-content">
+                    <span class="icon">&#10010;</span>
+                    <div>
+                        <h2>R$ 500,00</h2>
+                        <p>A Receber</p>
+                    </div>
+                </div>
+                <a href="#ver">Ver</a>
+            </div>
+            <div class="card card-red">
+                <div class="card-content">
+                    <span class="icon">&#10006;</span>
+                    <div>
+                        <h2>R$ 800,00</h2>
+                        <p>A Pagar</p>
+                    </div>
+                </div>
+                <a href="#ver">Ver</a>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <h3>Status Locação - Últimos 30 Dias</h3>
+                <img src="pie-chart.png" alt="Gráfico de Pizza">
+            </div>
+            <div class="chart">
+                <h3>Recebido X Pago - Últimos 30 Dias</h3>
+                <img src="pie-chart.png" alt="Gráfico de Pizza">
+            </div>
+            <div class="chart">
+                <h3>Receitas R$ - Últimos 7 Dias</h3>
+                <img src="bar-chart.png" alt="Gráfico de Barras">
+            </div>
+            <div class="chart">
+                <h3>Despesas R$ - Últimos 7 Dias</h3>
+                <img src="bar-chart.png" alt="Gráfico de Barras">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

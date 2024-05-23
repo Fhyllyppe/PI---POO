@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuama</title>
+    <link rel="stylesheet" href="listagem_financeiro.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>Apuama</h1>
+            <p>Software para Locadoras</p>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">Dashboard</li>
+            <li class="menu-item" onclick="toggleSubMenu('cadastros-gerais')">Cadastros Gerais</li>
+            <ul class="submenu" id="cadastros-gerais">
+                <li>Cargos</li>
+                <li>Cidades</li>
+                <li>Grupos de Veículos</li>
+                <li>Itens do Checkin</li>
+                <li>Seguros das Locações</li>
+                <li>Tipos de Adicionais</li>
+                <li>Tipos de Cobranças Extras</li>
+                <li>Tipos de Recebimentos</li>
+                <li>Tipos de Fornecedores</li>
+                <li>Tipos de Tarifas</li>
+            </ul>
+            <li class="menu-item">Cadastro de Pessoas</li>
+            <li class="menu-item" onclick="toggleSubMenu('financeiro')">Financeiro</li>
+            <ul class="submenu" id="financeiro">
+                <li>Plano de Contas</li>
+                <li>Contas a Receber</li>
+                <li>Contas a Pagar</li>
+                <li>Caixa</li>
+            </ul>
+            <li class="menu-item">Locações</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Contas a Receber</h2>
+            <button class="logout">Sair</button>
+        </div>
+        <div class="toolbar">
+            <button>+ Novo</button>
+            <button>Editar</button>
+            <button>Quitar</button>
+            <button>Cancelar</button>
+            <button>Excluir</button>
+            <button>Recibo</button>
+            <button>Relatório</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Sacado</th>
+                        <th>Data Vencimento</th>
+                        <th>Valor</th>
+                        <th>Data Pagamento</th>
+                        <th>Desconto</th>
+                        <th>Juro</th>
+                        <th>Valor Pago</th>
+                        <th>Forma Recebimento</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>Thais</td>
+                        <td>10/06/2017</td>
+                        <td>200,00</td>
+                        <td>03/07/2017</td>
+                        <td>10,00</td>
+                        <td>0,00</td>
+                        <td>190,00</td>
+                        <td>Dinheiro</td>
+                        <td><span class="status green">Quitada</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Thais</td>
+                        <td>25/06/2017</td>
+                        <td>518,00</td>
+                        <td>25/06/2017</td>
+                        <td>0,00</td>
+                        <td>0,00</td>
+                        <td>518,00</td>
+                        <td>Cartão de Crédito</td>
+                        <td><span class="status green">Quitada</span></td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <button>Anterior</button>
+            <button>1</button>
+            <button>2</button>
+            <button>Próximo</button>
+        </div>
+    </div>
+    <script src="listagem_financeiro.js"></script>
+</body>
+</html>
