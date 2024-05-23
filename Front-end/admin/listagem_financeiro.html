@@ -7,103 +7,147 @@
     <link rel="stylesheet" href="listagem_financeiro.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <h1>Apuama</h1>
-            <p>Software para Locadoras</p>
-        </div>
-        <ul class="menu">
-            <li class="menu-item">Dashboard</li>
-            <li class="menu-item" onclick="toggleSubMenu('cadastros-gerais')">Cadastros Gerais</li>
-            <ul class="submenu" id="cadastros-gerais">
-                <li>Cargos</li>
-                <li>Cidades</li>
-                <li>Grupos de Veículos</li>
-                <li>Itens do Checkin</li>
-                <li>Seguros das Locações</li>
-                <li>Tipos de Adicionais</li>
-                <li>Tipos de Cobranças Extras</li>
-                <li>Tipos de Recebimentos</li>
-                <li>Tipos de Fornecedores</li>
-                <li>Tipos de Tarifas</li>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Apuama</h2>
+                <p>Software para Locadoras</p>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#" class="expandable" onclick="toggleSubmenu('cadastros-gerais')">Cadastros Gerais</a>
+                    <ul id="cadastros-gerais" class="submenu">
+                        <li><a href="#">Cargos</a></li>
+                        <li><a href="#">Cidades</a></li>
+                        <li><a href="#">Grupos de Veículos</a></li>
+                        <li><a href="#">Itens do Checkin</a></li>
+                        <li><a href="#">Seguros das Locações</a></li>
+                        <li><a href="#">Tipos de Adicionais</a></li>
+                        <li><a href="#">Tipos de Cobranças Extras</a></li>
+                        <li><a href="#">Tipos de Recebimentos</a></li>
+                        <li><a href="#">Tipos de Fornecedores</a></li>
+                        <li><a href="#">Tipos de Tarifas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cadastro de Pessoas</a></li>
+                <li><a href="#" class="expandable" onclick="toggleSubmenu('financeiro')">Financeiro</a>
+                    <ul id="financeiro" class="submenu">
+                        <li><a href="#">Plano de Contas</a></li>
+                        <li><a href="#">Contas a Receber</a></li>
+                        <li><a href="#">Contas a Pagar</a></li>
+                        <li><a href="#">Caixa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Locações</a></li>
             </ul>
-            <li class="menu-item">Cadastro de Pessoas</li>
-            <li class="menu-item" onclick="toggleSubMenu('financeiro')">Financeiro</li>
-            <ul class="submenu" id="financeiro">
-                <li>Plano de Contas</li>
-                <li>Contas a Receber</li>
-                <li>Contas a Pagar</li>
-                <li>Caixa</li>
-            </ul>
-            <li class="menu-item">Locações</li>
-        </ul>
+        </aside>
+        <main class="content">
+            <header class="content-header">
+                <h1>Contas a Receber</h1>
+                <button class="logout-button">Sair</button>
+            </header>
+            <div class="content-body">
+                <div class="toolbar">
+                    <button class="btn new" onclick="openModal('modal-new')">+ Novo</button>
+                    <button class="btn edit" onclick="openModal('modal-edit')">Editar</button>
+                    <button class="btn remove" onclick="openModal('modal-remove')">Quitar</button>
+                    <button class="btn cancel" onclick="openModal('modal-cancel')">Cancelar</button>
+                    <button class="btn delete" onclick="openModal('modal-delete')">Excluir</button>
+                    <button class="btn receipt" onclick="openModal('modal-receipt')">Recibo</button>
+                    <button class="btn report" onclick="openModal('modal-report')">Relatório</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Sacado</th>
+                            <th>Data Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pagamento</th>
+                            <th>Desconto</th>
+                            <th>Juro</th>
+                            <th>Valor Pago</th>
+                            <th>Forma Recebimento</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Thais</td>
+                            <td>10/06/2017</td>
+                            <td>200,00</td>
+                            <td>03/07/2017</td>
+                            <td>10,00</td>
+                            <td>0,00</td>
+                            <td>190,00</td>
+                            <td>Dinheiro</td>
+                            <td><span class="status paid">Quitada</span></td>
+                        </tr>
+                        <!-- Outras linhas de exemplo -->
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button class="prev">Anterior</button>
+                    <span>1</span>
+                    <span>2</span>
+                    <button class="next">Próximo</button>
+                </div>
+            </div>
+        </main>
     </div>
-    <div class="main-content">
-        <div class="header">
-            <h2>Contas a Receber</h2>
-            <button class="logout">Sair</button>
-        </div>
-        <div class="toolbar">
-            <button>+ Novo</button>
-            <button>Editar</button>
-            <button>Quitar</button>
-            <button>Cancelar</button>
-            <button>Excluir</button>
-            <button>Recibo</button>
-            <button>Relatório</button>
-        </div>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Sacado</th>
-                        <th>Data Vencimento</th>
-                        <th>Valor</th>
-                        <th>Data Pagamento</th>
-                        <th>Desconto</th>
-                        <th>Juro</th>
-                        <th>Valor Pago</th>
-                        <th>Forma Recebimento</th>
-                        <th>Situação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>3</td>
-                        <td>Thais</td>
-                        <td>10/06/2017</td>
-                        <td>200,00</td>
-                        <td>03/07/2017</td>
-                        <td>10,00</td>
-                        <td>0,00</td>
-                        <td>190,00</td>
-                        <td>Dinheiro</td>
-                        <td><span class="status green">Quitada</span></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Thais</td>
-                        <td>25/06/2017</td>
-                        <td>518,00</td>
-                        <td>25/06/2017</td>
-                        <td>0,00</td>
-                        <td>0,00</td>
-                        <td>518,00</td>
-                        <td>Cartão de Crédito</td>
-                        <td><span class="status green">Quitada</span></td>
-                    </tr>
-                    <!-- Adicione mais linhas conforme necessário -->
-                </tbody>
-            </table>
-        </div>
-        <div class="pagination">
-            <button>Anterior</button>
-            <button>1</button>
-            <button>2</button>
-            <button>Próximo</button>
+
+    <!-- Modals -->
+    <div id="modal-new" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-new')">&times;</span>
+            <h2>Novo Registro</h2>
+            <p>Conteúdo do modal para novo registro.</p>
         </div>
     </div>
+    <div id="modal-edit" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-edit')">&times;</span>
+            <h2>Editar Registro</h2>
+            <p>Conteúdo do modal para editar registro.</p>
+        </div>
+    </div>
+    <div id="modal-remove" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-remove')">&times;</span>
+            <h2>Quitar Registro</h2>
+            <p>Conteúdo do modal para quitar registro.</p>
+        </div>
+    </div>
+    <div id="modal-cancel" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-cancel')">&times;</span>
+            <h2>Cancelar Registro</h2>
+            <p>Conteúdo do modal para cancelar registro.</p>
+        </div>
+    </div>
+    <div id="modal-delete" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-delete')">&times;</span>
+            <h2>Excluir Registro</h2>
+            <p>Conteúdo do modal para excluir registro.</p>
+        </div>
+    </div>
+    <div id="modal-receipt" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-receipt')">&times;</span>
+            <h2>Recibo</h2>
+            <p>Conteúdo do modal para recibo.</p>
+        </div>
+    </div>
+    <div id="modal-report" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-report')">&times;</span>
+            <h2>Relatório</h2>
+            <p>Conteúdo do modal para relatório.</p>
+        </div>
+    </div>
+
     <script src="listagem_financeiro.js"></script>
 </body>
 </html>
