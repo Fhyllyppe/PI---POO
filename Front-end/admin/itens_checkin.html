@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apúama - Itens de Checkin</title>
+    <link rel="stylesheet" href="itens_checkin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Apuama">
+            <h1>Apuama</h1>
+            <p>Software para locadoras</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#cadastros-gerais">Cadastros Gerais</a></li>
+                <li><a href="#cadastro-pessoas">Cadastro de Pessoas</a></li>
+                <li><a href="#financeiro">Financeiro</a></li>
+                <li><a href="#locacoes">Locações</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="breadcrumb">
+                <a href="#home">Início</a> / <span>Itens de Checkin</span>
+            </div>
+            <div class="logout">
+                <a href="#sair">Sair</a>
+            </div>
+        </header>
+        <div class="actions">
+            <button class="btn btn-new">Novo</button>
+            <button class="btn btn-edit">Editar</button>
+            <button class="btn btn-delete">Excluir</button>
+            <div class="search">
+                <label for="search">Pesquisar:</label>
+                <input type="text" id="search" name="search">
+            </div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lataria</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Vidros</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Faróis</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pneus</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Estepe</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Higienização</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Manual de Utilização</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Documentação</td>
+                        <td>Ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span>Mostrando de 1 até 8 de 8 registros</span>
+                <div>
+                    <button class="btn btn-pagination">Anterior</button>
+                    <button class="btn btn-pagination">1</button>
+                    <button class="btn btn-pagination">Próximo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #484949;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(3, 109, 231);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar .logo img {
+    max-width: 200px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 8px;
+}
+
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px 10px 0px;
+    background-color: #484949;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #383838;
+    color: white;
+}
+
+/* -------- MAIN ---------------*/
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .breadcrumb {
+    font-size: 14px;
+}
+
+header .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+header .logout a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+.actions .btn-new {
+    background-color: #28a745;
+}
+
+.actions .btn-new:hover {
+    background-color: #115c23;
+}
+
+.actions .btn-edit {
+    background-color: #ffc107;
+}
+
+.actions .btn-edit:hover {
+    background-color: #b68800;
+}
+
+.actions .btn-delete {
+    background-color: #dc3545;
+}
+
+.actions .btn-delete:hover {
+    background-color: #a50515;
+}
+
+.actions .search {
+    display: flex;
+    align-items: center;
+}
+
+.actions .search label {
+    margin-right: 10px;
+}
+
+.actions .search input {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination .btn-pagination {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #343a40;
+    color: white;
+    margin-left: 5px;
+}

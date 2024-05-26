@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="tela-devolucoes.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+    <!---primeira parte-->
+<header>
+    <div class="header">
+            <button>Inicio/Locações/Devoluções</button>
+    </div>
+</header>
+
+
+<body>
+<!---Menu lateral-->
+<div class="menu-lateral">
+    <ul>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-address-book"></i> Cadastros Gerais</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Cadastro de Pessoas</a></li>
+        <li><a href="#"><i class="fas fa-money-bill-wave"></i> Financeiro</a></li>
+        <li><a href="#"><i class="fas fa-car"></i> Locações</a></li>
+    </ul>
+</div>
+
+<!---primeira parte do container body-->
+
+<div class="CONTAINER-GERAL">
+
+        <!---Linha 1 -->
+
+    <div class="linha-1">
+
+        <div class="col-1">
+            <label for="code">Código</label>
+            <input type="number" class="inputs-1" name="codigo">
+        </div>
+
+        <div class="col-2">
+            <label for="Código">Situação</label>
+            <input type="text" class="inputs-1" name="situacao">
+        </div>
+
+    </div>
+
+
+        <!---Linha 2 -->
+
+    <div class="linha-2">
+
+        <div class="col-3">
+            <label for="client">cliente</label>
+            <input type="text" class="inputs-2" name="cliente">
+        </div>
+
+        <div class="col-4">
+            <label for="movel">Veículo</label>
+            <input type="text" class="inputs-2" name="movel">
+        </div>
+
+        <div class="col-5">
+            <label for="funcionário">Funcionário</label>
+            <input type="text" class="inputs-2" name="funcionario">
+        </div>
+
+        <div class="col-6">
+            <label for="secure">Seguro</label>
+            <input type="text" class="inputs-2" name="sseguro">
+        </div>
+
+    </div>
+
+        <!---Linha 3 -->
+
+    <div class="linha-3">
+
+        <div class="col-7">
+            <label for="locacao">Data da locação</label>
+            <input type="date" class="inputs-3" name="data">
+        </div>
+
+        <div class="col-8">
+            <label for="time">Horário</label>
+            <input type="time" class="inputs-3" name="hora">
+        </div>
+
+        <div class="col-9">
+            <label for="devolucao">Data prevista da devolução</label>
+            <input type="date" class="inputs-3" name="devolucao">
+        </div>
+
+        <div class="col-10">
+            <label for="time-2">Horário</label>
+            <input type="time" class="inputs-3" name="hora-2">
+        </div>
+
+        <div class="col-11">
+            <label for="devolucao-2">Data da devolução</label>
+            <input type="date" class="inputs-3" name="devolucao-2">
+        </div>
+
+        <div class="col-12">
+            <label for="time-3">Horário</label>
+            <input type="time" class="inputs-3" name="hora-3">
+        </div>
+
+        <div class="col-13">
+            <label for="dias">Total de dias</label>
+            <input type="number" class="inputs-3" name="dias">
+        </div>
+
+    </div>
+
+        <!---Linha 4 -->
+    
+    <div class="linha-4">
+
+        <div class="col-14">
+            <label for="Km">Km Atual</label>
+            <input type="number" class="inputs-4" name="Km">
+        </div>
+
+        <div class="col-15">
+            <label for="km-2">Km devolução</label>
+            <input type="number" class="inputs-4" name="km-2">
+        </div>
+
+        <div class="col-16">
+            <label for="nivel">Nível do Tanque</label>
+            <input type="number" class="inputs-4" name="Tanque">
+        </div>
+
+        <div class="col-17">
+            <label for="valor">Valor da Diária</label>
+            <input type="number" class="inputs-4" name="diaria">
+        </div>
+
+        <div class="col-18">
+            <label for="valor-2">Valor do Seguro</label>
+            <input type="number" class="inputs-4" name="seguro">
+        </div>
+
+        <div class="col-19">
+            <label for="valor-3">Valor Total</label>
+            <input type="number" class="inputs-4" name="total">
+        </div>
+    </div>
+
+    <!---AQUI É A SEGUNDA PARTE DA PÁGINA -->
+
+    <!---CONTAINER 1 -->
+<div class="container-1">
+
+    <h1 class="titulo-1">Adicionais da locação</h1>
+
+    <div class="linha-5">
+        <div class="col-20">
+            <label for="assento">Assento de Elevação</label>
+            <input type="checkbox" class="inputs-5" name="assento">
+        </div>
+
+        <div class="col-21">
+            <label for="bebe-conforto">Bebê Conforto</label>
+            <input type="checkbox" class="inputs-5" name="bebe-conforto">
+        </div>
+
+        <div class="col-22">
+            <label for="cadeira-bebe">Cadeira de Bebê</label>
+            <input type="checkbox" class="inputs-5" name="cadeira-bebe">
+        </div>
+
+        <div class="col-23">
+            <label for="gps">GPS</label>
+            <input type="checkbox" class="inputs-5" name="gps">
+        </div>
+        
+    </div>
+</div>
+
+
+    <!---CONTAINER 2 -->
+
+    <div class="container-2">
+
+        <h1 class="titulo-2">Cobranças Extras da Locação</h1>
+
+        <div class="linha-6">
+
+            <div class="col-24">
+                <label for="lavagem-aparencia">Lavagem Aparência</label>
+                <input type="checkbox" class="inputs-6" name="lavagem-aparencia">
+            </div>
+
+            <div class="col-25">
+                <label for="lavagem-completa">Lavagem Completa</label>
+                <input type="checkbox" class="inputs-6" name="lavagem-completa">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!---CONTAINER 3 -->
+
+    <div class="linha-7">
+
+        <h1 class="titulo-2">Observação</h1>
+
+        <div class="col-26">
+            <input type="text" class="inputs-7" name="observacao">
+        </div>
+
+    </div>
+
+    <!---CONTAINER 4 -->    
+
+    <div class="linha-8">
+
+        <button id="salvar" class="botoes-8" name="salvar">Salvar</button>
+        <button id="Checkin" class="botoes-8" name="itens">Itens Checkin</button>
+        <button id="contas" class="botoes-8" name="contas">Contas a Receber</button>
+        <button id="contrato" class="botoes-8" name="contrato">Contrato</button>
+        <button id="comprovante" class="botoes-8" name="comprovante">Comprovante</button>
+        <button id="fechar" class="botoes-8" name="fechar">Fechar</button>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

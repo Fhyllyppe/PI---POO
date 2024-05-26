@@ -40,7 +40,7 @@ a{
     color:white;
     text-decoration: none;
     padding-right: 35px;
-    font-size: 20px;
+    font-size: 27px;
     position: relative;
     padding: 0 10px;
     font-weight: bold;
@@ -91,6 +91,11 @@ a:hover::after{
     height: 100%;
     display:grid;
     background-color: rgba(82, 143, 235, 1);
+}
+
+.img-planodefundo{
+    display: flex;
+    opacity: 1;
 }
 
 h1{
@@ -168,7 +173,8 @@ div input{
 
 .entrar:hover{
     color: black;
-    background-color: gray;
+    background-color: rgb(214, 214, 214);
+    cursor: pointer;
 }
 
 /*---------------------------------------------------------------------*/
@@ -215,18 +221,18 @@ div input{
   .caixas-modelo {
     display: grid; /* Habilita o layout CSS Grid para o container interno */
     grid-template-columns: repeat(3, 1fr); /* Divide o container interno em 3 colunas iguais */
-    gap: 20px; /* Adiciona espaçamento entre os itens da grade dentro do container interno */
+    gap: 60px; /* Adiciona espaçamento entre os itens da grade dentro do container interno */
     background-color: white; /* Cor de fundo (ajuste para a cor desejada) */
-    padding: 20px; /* Acolchoamento em torno do conteúdo */
+    margin-top: 50px; /* Acolchoamento em torno do conteúdo */
   }
   
   .col { /* Estilos para cada div (coluna) */
-    border: 1px solid #ccc; /* Borda simples para distinção visual */
-    padding: 0px; /* Acolchoamento em torno do conteúdo */
+    border: 1px solid #ccc; /* Borda simples para distinção visual */ /* Acolchoamento em torno do conteúdo */
     background-color: gray;
     width: 300px;
     height: 400px;
   }
+/*---------------------------------------------------------------------*/
 
   /* os blocos*/
 
@@ -234,7 +240,59 @@ div input{
     width: 100%;
     height: 80px;
     background-color: rgba(82, 143, 235, 1);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
   }
+
+  .img-carros{
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.7);
+  }
+
+  .img-carros:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+  }
+
+  .span-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  .valor-veiculo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; 
+    background-color: white;
+    margin: 10px 40px 10px 40px;
+    border-radius: 5px;
+  }
+
+  .botao-grupo-carros{
+    margin-left: 100px;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: #024591;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .botao-grupo-carros:hover{
+    background-color: #c4c4c4;
+    color: rgb(23, 23, 24);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
 
   
                           

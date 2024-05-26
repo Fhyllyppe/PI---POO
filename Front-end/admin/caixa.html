@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuama</title>
+    <link rel="stylesheet" href="caixa.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Apuama</h1>
+                <p>Software para Locadoras</p>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuCadastrosGerais')">Cadastros Gerais</a>
+                        <ul id="submenuCadastrosGerais" class="submenu">
+                            <li><a href="#">Cargos</a></li>
+                            <li><a href="#">Cidades</a></li>
+                            <li><a href="#">Grupos de Veículos</a></li>
+                            <li><a href="#">Itens do Checkin</a></li>
+                            <li><a href="#">Seguros das Locações</a></li>
+                            <li><a href="#">Tipos de Adicionais</a></li>
+                            <li><a href="#">Tipos de Cobranças Extras</a></li>
+                            <li><a href="#">Tipos de Recebimentos</a></li>
+                            <li><a href="#">Tipos de Fornecedores</a></li>
+                            <li><a href="#">Tipos de Tarifas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuCadastroPessoas')">Cadastro de Pessoas</a>
+                        <ul id="submenuCadastroPessoas" class="submenu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="toggleSubMenu('submenuFinanceiro')">Financeiro</a>
+                        <ul id="submenuFinanceiro" class="submenu">
+                            <li><a href="#">Plano de Contas</a></li>
+                            <li><a href="#">Contas a Receber</a></li>
+                            <li><a href="#">Contas a Pagar</a></li>
+                            <li><a href="#">Caixa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Locações</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#">Sair</a>
+            </div>
+        </aside>
+        <main class="content">
+            <header>
+                <h2>Caixa</h2>
+            </header>
+            <section class="summary">
+                <div class="summary-box green">
+                    <h3>Entradas</h3>
+                    <p>R$ 1.265,60</p>
+                </div>
+                <div class="summary-box red">
+                    <h3>Saídas</h3>
+                    <p>R$ 500,00</p>
+                </div>
+                <div class="summary-box blue">
+                    <h3>Saldo</h3>
+                    <p>R$ 765,60</p>
+                </div>
+            </section>
+            <section class="controls">
+                <button onclick="openModal()">Estornar Parcela</button>
+                <button>Relatório</button>
+            </section>
+            <section class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Destino</th>
+                            <th>Data Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pagamento</th>
+                            <th>Valor Pago</th>
+                            <th>Forma Pagamento</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Thaís</td>
+                            <td>25/06/2017</td>
+                            <td>518,00</td>
+                            <td>25/06/2017</td>
+                            <td>518,00</td>
+                            <td>Cartão de Crédito</td>
+                            <td class="green-text">E</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Diana</td>
+                            <td>28/06/2017</td>
+                            <td>150,00</td>
+                            <td>28/06/2017</td>
+                            <td>150,00</td>
+                            <td>Depósito</td>
+                            <td class="green-text">E</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Lava Car Elite</td>
+                            <td>28/06/2017</td>
+                            <td>67,00</td>
+                            <td>29/06/2017</td>
+                            <td>200,00</td>
+                            <td>Dinheiro</td>
+                            <td class="red-text">S</td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+            </section>
+            <div class="pagination">
+                <button>Anterior</button>
+                <span>1</span>
+                <button>Próximo</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Estornar Parcela</p>
+            <!-- Conteúdo do modal -->
+        </div>
+    </div>
+
+    <script src="caixa.js"></script>
+</body>
+</html>

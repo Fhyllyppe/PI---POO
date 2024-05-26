@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>Apuama</h1>
+            <p>Software para Locadoras</p>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">Dashboard</li>
+            <li class="menu-item" onclick="toggleSubMenu('cadastros-gerais')">Cadastros Gerais</li>
+            <ul class="submenu" id="cadastros-gerais">
+                <li>Cargos</li>
+                <li>Cidades</li>
+                <li>Grupos de Veículos</li>
+                <li>Itens do Checkin</li>
+                <li>Seguros das Locações</li>
+                <li>Tipos de Adicionais</li>
+                <li>Tipos de Cobranças Extras</li>
+                <li>Tipos de Recebimentos</li>
+                <li>Tipos de Fornecedores</li>
+                <li>Tipos de Tarifas</li>
+            </ul>
+            <li class="menu-item">Cadastro de Pessoas</li>
+            <li class="menu-item" onclick="toggleSubMenu('financeiro')">Financeiro</li>
+            <ul class="submenu" id="financeiro">
+                <li>Plano de Contas</li>
+                <li>Contas a Receber</li>
+                <li>Contas a Pagar</li>
+                <li>Caixa</li>
+            </ul>
+            <li class="menu-item">Locações</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Contas a Receber</h2>
+            <button class="logout">Sair</button>
+        </div>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" value="3" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" value="Darian" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor" value="50,00">
+                </div>
+                <div class="form-group">
+                    <label for="data-vencimento">Data de Vencimento:</label>
+                    <input type="date" id="data-vencimento" value="2016-12-13">
+                </div>
+                <div class="form-group">
+                    <label for="desconto">Desconto:</label>
+                    <input type="text" id="desconto" value="10,00">
+                </div>
+                <div class="form-group">
+                    <label for="juros">Juros:</label>
+                    <input type="text" id="juros" value="0,00">
+                </div>
+                <div class="form-group">
+                    <label for="data-pagamento">Data de Pagamento:</label>
+                    <input type="date" id="data-pagamento">
+                </div>
+                <div class="form-group">
+                    <label for="valor-pago">Valor Pago:</label>
+                    <input type="text" id="valor-pago">
+                </div>
+                <div class="form-group">
+                    <label for="plano-contas">Plano de Contas:</label>
+                    <select id="plano-contas">
+                        <option>Locações</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-recebimento">Tipo de Recebimento:</label>
+                    <select id="tipo-recebimento">
+                        <option>Depósito</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao"></textarea>
+                </div>
+                <div class="form-group situacao">
+                    <label for="situacao">Situação:</label>
+                    <span class="status red">Pendente</span>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="openModal()">Quitar</button>
+                    <button type="button">Novo</button>
+                    <button type="button">Fechar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>QUITAR PARCELA</h2>
+            <form>
+                <div class="form-group">
+                    <label for="recebido-em">Recebido em:</label>
+                    <input type="date" id="recebido-em" value="2017-06-17">
+                </div>
+                <div class="form-group">
+                    <label for="tipo-recebimento-modal">Tipo de Recebimento:</label>
+                    <select id="tipo-recebimento-modal">
+                        <option>Depósito</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="desconto-modal">Desconto:</label>
+                    <input type="text" id="desconto-modal" value="10,00">
+                </div>
+                <div class="form-group">
+                    <label for="juros-modal">Juro:</label>
+                    <input type="text" id="juros-modal">
+                </div>
+                <div class="form-group">
+                    <label for="valor-pago-modal">Valor Pago:</label>
+                    <input type="text" id="valor-pago-modal" value="40,00">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeModal()">Quitar</button>
+                    <button type="button" onclick="closeModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

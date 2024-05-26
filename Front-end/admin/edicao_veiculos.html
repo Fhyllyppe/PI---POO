@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Veículos</title>
+    <link rel="stylesheet" href="edicao_veiculos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="upload">Inserir Imagens do Veículo:</label>
+            <input type="file" id="upload" multiple>
+        </div>
+
+        <div class="status form-group">
+            <label>Situação:</label>
+            <span></span>
+            <span>Disponível</span>
+        </div>
+
+        <div class="form-group">
+            <label for="code">Código:</label>
+            <input type="text" id="code" value="5" disabled>
+        </div>
+
+        <div class="form-images">
+            <div>
+                <img src="https://via.placeholder.com/100x75" alt="Car 1">
+                <button>Excluir</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/100x75" alt="Car 2">
+                <button>Excluir</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/100x75" alt="Car 3">
+                <button>Excluir</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/100x75" alt="Car 4">
+                <button>Excluir</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/100x75" alt="Car 5">
+                <button>Excluir</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="model">Modelo:</label>
+            <input type="text" id="model" value="Ford Fusion 2.5 FAST">
+        </div>
+
+        <div class="form-group">
+            <label for="owner">Proprietário:</label>
+            <input type="text" id="owner" value="Thaís">
+        </div>
+
+        <h3>Informações de Fábrica:</h3>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="supplier">Fornecedor:</label>
+                <input type="text" id="supplier" value="Fancar Veículos">
+            </div>
+            <div class="form-group">
+                <label for="renavam">Renavam:</label>
+                <input type="text" id="renavam" value="9930626432">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="plate">Placa:</label>
+                <input type="text" id="plate" value="AKP-9407">
+            </div>
+            <div class="form-group">
+                <label for="chassis">Chassi:</label>
+                <input type="text" id="chassis" value="2323112">
+            </div>
+            <div class="form-group">
+                <label for="year">Ano:</label>
+                <input type="text" id="year" value="2017">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="brand">Marca:</label>
+                <input type="text" id="brand" value="Ford">
+            </div>
+            <div class="form-group">
+                <label for="color">Cor:</label>
+                <input type="text" id="color" value="Branco">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="engine">Motor:</label>
+                <select id="engine">
+                    <option selected>Motor Turbo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="transmission">Câmbio:</label>
+                <select id="transmission">
+                    <option selected>Automático</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fuel">Combustível:</label>
+                <select id="fuel">
+                    <option selected>Flex</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="acquisition-date">Data de Aquisição:</label>
+                <input type="date" id="acquisition-date" value="2017-04-10">
+            </div>
+            <div class="form-group">
+                <label for="doors">Número de Portas:</label>
+                <input type="text" id="doors" value="4">
+            </div>
+        </div>
+
+        <h3>Informações Atuais:</h3>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fuel-level">Nível de Tanque:</label>
+                <input type="text" id="fuel-level" value="100.0">
+            </div>
+            <div class="form-group">
+                <label for="mileage">Km Atual:</label>
+                <input type="text" id="mileage" value="20000.0">
+            </div>
+            <div class="form-group">
+                <label for="group">Grupo:</label>
+                <select id="group">
+                    <option selected>LX - Executivo Luxo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="observation">Observação:</label>
+            <textarea id="observation" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button class="save">Salvar</button>
+            <button class="close">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
