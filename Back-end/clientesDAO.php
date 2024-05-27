@@ -59,6 +59,108 @@ class ClientesDAO {
         return true;
     }
 
+    public function salvar(Clientes $cliente) {
+        $retorno = array();
+
+        try {
+            if (!$this->validarCPF($cliente->getCpf()) || !$this->validarCNPJ($cliente->getCnpj())) {
+                $retorno['situacao'] = 'ERRO';
+                $retorno['title'] = 'Atenção!';
+                $retorno['type'] = 'error';
+                $retorno['mensagem'] = 'Falha ao salvar registro! Campos obrigatórios não foram informados.';
+                return json_encode($retorno);
+            }
+
+            $tipoAlteracao = 1;
+
+            if ($cliente->getSituacao() === null) {
+                $cliente->setSituacao(2);
+            }
+
+            $sql = "SELECT * FROM clientes WHERE nome = :nome";
+            $stmt = Conexao::getConn()->prepare($sql);
+            $stmt->bindValue(':nome', $cliente->getNome());
+            $stmt->execute();
+
+            $c = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($cliente->getClienteID() !== null) {
+                if (count($c) > 0 && $c[0]['id'] !== $cliente->getClienteID()) {
+                    return $this->getMensagemNomeIgual();
+                }
+                $tipoAlteracao = 2;
+            } else {
+                if (count($c) > 0) {
+                    return $this->getMensagemNomeIgual();
+                }
+            }
+
+            if ($cliente->getClienteID() === null) {
+                $sql = "INSERT INTO clientes (nome, cpf, cnpj, situacao) VALUES (:nome, :cpf, :cnpj, :situacao)";
+                $stmt = Conexao::getConn()->prepare($sql);
+            } else {
+                $sql = "UPDATE clientes SET nome = :nome, cpf = :cpf, cnpj = :cnpj, situacao = :situacao WHERE id = :id";
+                $stmt = Conexao::getConn()->prepare($sql);
+                $stmt->bindValue(':id', $cliente->getClienteID());
+            }
+
+            $stmt->bindValue(':nome', $cliente->getNome());
+            $stmt->bindValue(':cpf', $cliente->getCpf());
+            $stmt->bindValue(':cnpj', $cliente->getCnpj());
+            $stmt->bindValue(':situacao', $cliente->getSituacao());
+
+            $stmt->execute();
+
+            if ($cliente->getClienteID() === null) {
+                $cliente->setClienteID(Conexao::getConn()->lastInsertId());
+            }
+
+            $this->salvarLog($cliente->getClienteID(), $tipoAlteracao, $this->criaObsLog($cliente));
+
+            $retorno['id'] = $cliente->getClienteID();
+            $retorno['situacao'] = 'OK';
+            $retorno['title'] = 'Salvo!';
+            $retorno['type'] = 'success';
+            $retorno['mensagem'] = 'Registro salvo com sucesso!';
+        } catch (Exception $ex) {
+            $retorno['situacao'] = 'ERRO';
+            $retorno['title'] = 'Atenção!';
+            $retorno['type'] = 'error';
+            $retorno['mensagem'] = 'Falha ao salvar registro!';
+        }
+
+        return json_encode($retorno);
+    }
+
+    private function getMensagemNomeIgual() {
+        $retorno['situacao'] = 'ERRO';
+        $retorno['title'] = 'Atenção!';
+        $retorno['type'] = 'error';
+        $retorno['mensagem'] = 'Já existe um registro com o mesmo nome!';
+        return json_encode($retorno);
+    }
+
+    private function salvarLog($id, $tipoAlteracao, $obs) {
+        $sql = "INSERT INTO Log (Tabela, Chave, DataHora, FuncionarioID, TipoAlteracao) VALUES (:Tabela, :Chave, CURRENT_TIMESTAMP, :FuncionarioID, :TipoAlteracao)";
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->bindValue(':Tabela', 'clientes');
+        $stmt->bindValue(':Chave', $id);
+        $stmt->bindValue(':FuncionarioID', 1); // Altere para obter o ID do funcionário logado
+        $stmt->bindValue(':TipoAlteracao', $tipoAlteracao);
+
+        $stmt->execute();
+    }
+
+    private function criaObsLog($cliente) {
+        $obs = "Alterações realizadas no cliente ID: " . $cliente->getClienteID() . "\n";
+        $obs .= "Nome: " . $cliente->getNome() . "\n";
+        $obs .= "CPF: " . $cliente->getCpf() . "\n";
+        $obs .= "CNPJ: " . $cliente->getCnpj() . "\n";
+        $obs .= "Situação: " . $cliente->getSituacao() . "\n";
+        // Adicionar outros campos conforme necessário
+        return $obs;
+    }
+
     public function create(Clientes $Clientes) {
         // Valida CPF
         if (!$this->validarCPF($Clientes->getCpf())) {
@@ -105,10 +207,10 @@ class ClientesDAO {
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->execute();
 
-        if($stmt->rowCount() > 0){
+        if ($stmt->rowCount() > 0) {
             $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             return $resultado;
-        }else{
+        } else {
             return [];
         }
     }
