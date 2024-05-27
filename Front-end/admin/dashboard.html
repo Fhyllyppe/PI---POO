@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apuama - Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -37,7 +38,7 @@
                 <div class="card-content">
                     <span class="icon">&#128663;</span>
                     <div>
-                        <h2>5</h2>
+                        <h2 id="locados">5</h2>
                         <p>Locados</p>
                     </div>
                 </div>
@@ -47,7 +48,7 @@
                 <div class="card-content">
                     <span class="icon">&#10010;</span>
                     <div>
-                        <h2>R$ 500,00</h2>
+                        <h2 id="receber">R$ 500,00</h2>
                         <p>A Receber</p>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                 <div class="card-content">
                     <span class="icon">&#10006;</span>
                     <div>
-                        <h2>R$ 800,00</h2>
+                        <h2 id="pagar">R$ 800,00</h2>
                         <p>A Pagar</p>
                     </div>
                 </div>
@@ -67,21 +68,22 @@
         <div class="charts">
             <div class="chart">
                 <h3>Status Locação - Últimos 30 Dias</h3>
-                <img src="pie-chart.png" alt="Gráfico de Pizza">
+                <canvas id="statusLocacaoChart"></canvas>
             </div>
             <div class="chart">
                 <h3>Recebido X Pago - Últimos 30 Dias</h3>
-                <img src="pie-chart.png" alt="Gráfico de Pizza">
+                <canvas id="recebidoPagoChart"></canvas>
             </div>
             <div class="chart">
                 <h3>Receitas R$ - Últimos 7 Dias</h3>
-                <img src="bar-chart.png" alt="Gráfico de Barras">
+                <canvas id="receitasChart"></canvas>
             </div>
             <div class="chart">
                 <h3>Despesas R$ - Últimos 7 Dias</h3>
-                <img src="bar-chart.png" alt="Gráfico de Barras">
+                <canvas id="despesasChart"></canvas>
             </div>
         </div>
     </div>
+    <script src="dashboard.js"></script>
 </body>
 </html>
