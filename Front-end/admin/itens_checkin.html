@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apúama - Itens de Checkin</title>
+    <title>Apuama - Itens de Checkin</title>
     <link rel="stylesheet" href="itens_checkin.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
         <div class="actions">
             <button class="btn btn-new">Novo</button>
             <button class="btn btn-edit">Editar</button>
-            <button class="btn btn-delete">Excluir</button>
+            <button class="btn btn-delete" onclick="confirmDelete()">Excluir</button>
             <div class="search">
                 <label for="search">Pesquisar:</label>
                 <input type="text" id="search" name="search">
@@ -51,42 +51,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr data-id="1">
                         <td>1</td>
                         <td>Lataria</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="2">
                         <td>2</td>
                         <td>Vidros</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="3">
                         <td>3</td>
                         <td>Faróis</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="4">
                         <td>4</td>
                         <td>Pneus</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="5">
                         <td>5</td>
                         <td>Estepe</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="6">
                         <td>6</td>
                         <td>Higienização</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="7">
                         <td>7</td>
                         <td>Manual de Utilização</td>
                         <td>Ativo</td>
                     </tr>
-                    <tr>
+                    <tr data-id="8">
                         <td>8</td>
                         <td>Documentação</td>
                         <td>Ativo</td>
@@ -103,5 +103,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal de confirmação -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Deseja excluir o registro selecionado?</p>
+            <button onclick="deleteItem()">Sim</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="itens_checkin.js"> </script>
 </body>
 </html>
